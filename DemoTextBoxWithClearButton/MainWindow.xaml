@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <!--<SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
         <Style x:Key="TextBoxWithClearButtonStyle" TargetType="{x:Type TextBox}">
@@ -24,22 +24,22 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBox}">
-                       
-                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                              <!--On est dans le template d'un TextBox
+                                --><!-- On est dans le template d'un TextBox
                                 TemplateBinding permet de se lier avec une propriété du TextBox dont on fournit le template
-                                -->
-                                <Button Grid.Column="1" Width="{TemplateBinding ActualHeight}" >
+                                --><!--
+                                <Button Grid.Column="1" Width="{TemplateBinding ActualHeight}"  >
                                     <Button.Template>
                                         <ControlTemplate TargetType="{x:Type Button}">
                                             <Grid Margin="2" >
-                                                <!--Fill pas transparent pour les clicks-->
+                                                --><!--Fill pas transparent pour les clicks--><!--
                                                 <Ellipse Stroke="Red" Fill="#01010101"  StrokeThickness="1"></Ellipse>
                                                 <TextBlock Text="x" Margin="2 2 2 6" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10" Foreground="Red" />
                                             </Grid>
@@ -48,7 +48,7 @@
                                 </Button>
                             </Grid>
                         </Border>
-                          
+
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Opacity" TargetName="border" Value="0.56"/>
@@ -72,11 +72,11 @@
                     <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
                 </MultiTrigger>
             </Style.Triggers>
-        </Style>
+        </Style>-->
     </Window.Resources>
     <Grid>
-        <TextBox Style="{DynamicResource TextBoxWithClearButtonStyle}" 
-                 HorizontalAlignment="Left" Margin="105,118,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-
+        <!--<TextBox Style="{DynamicResource TextBoxWithClearButtonStyle}" 
+                 HorizontalAlignment="Left" Margin="105,118,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>-->
+        <local:TextBoxWithClearButton Margin="258,217,400,168" Text="Salut" />
     </Grid>
 </Window>
