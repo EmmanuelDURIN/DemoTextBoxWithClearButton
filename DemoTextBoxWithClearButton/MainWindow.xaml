@@ -39,7 +39,8 @@
                                     <Button.Template>
                                         <ControlTemplate TargetType="{x:Type Button}">
                                             <Grid Margin="2" >
-                                                <Ellipse Stroke="Red"  StrokeThickness="1"></Ellipse>
+                                                <!--Fill pas transparent pour les clicks-->
+                                                <Ellipse Stroke="Red" Fill="#01010101"  StrokeThickness="1"></Ellipse>
                                                 <TextBlock Text="x" Margin="2 2 2 6" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10" Foreground="Red" />
                                             </Grid>
                                         </ControlTemplate>
